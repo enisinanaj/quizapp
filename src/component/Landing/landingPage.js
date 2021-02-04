@@ -24,6 +24,7 @@ import {
   MDBFormInline,
   MDBAnimation
 } from "mdbreact";
+
 import "./landing.css";
 
 class ClassicFormPage extends React.Component {
@@ -99,21 +100,20 @@ class ClassicFormPage extends React.Component {
                   type="fadeInLeft"
                   delay=".3s"
                   className="white-text text-center text-md-left col-md-6 mt-xl-5 mb-5" >
-                  <h1 className="h1-responsive font-weight-bold">
-                    Guess what!
+                  <h1 className="h1-responsive font-weight-bold ">
+                    GUESS WHAT!
                   </h1>
-                  
                   <hr className="hr-light" />
                   <h4 className="h1-responsive font-weight-bold">
-                    do you want to join your friends for a game?
+                    Are you up for a game?
                   </h4>
                   <h6 className="mb-4">
-                    here is a platform you enjoy questioning and being questioned about. 
+                    Here is a platform you enjoy questioning and being questioned about. 
                   </h6>
-                  <MDBBtn outline color="white">
-                    Join
-                  </MDBBtn>
                   <MDBBtn  color="white">
+                  Challenge yourSelf
+                  </MDBBtn>
+                  <MDBBtn outline color="white">
                     Challenge your friends
                   </MDBBtn>
                 </MDBAnimation>
@@ -143,7 +143,8 @@ class ClassicFormPage extends React.Component {
                           icon="lock"
                           type="password" />
                         <div className="text-center mt-4 black-text">
-                          <MDBBtn color="indigo">Sign Up</MDBBtn>
+                          <MDBBtn color="white">Sign Up</MDBBtn>
+                          
                           <hr className="hr-light" />
                           <div className="text-center d-flex justify-content-center white-label">
                             <a href="#!" className="p-2 m-2">
