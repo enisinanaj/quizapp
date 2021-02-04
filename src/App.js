@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import "../src/App.css";
+import 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import landingPage from './component/Landing/landingPage';
+import navigation from './component/Landing/Navigation';
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'mdbreact/dist/css/mdb.css'; 
+import QuizCategories from './component/Landing/QuizCategories';
 function App() {
   return (
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route path="/"  component={landingPage} />
+        <Route path="/QuizCategories"  component={QuizCategories} />
+        
+       
+
+      </Switch>
+
     </div>
+  </Router>
   );
 }
 
