@@ -65,9 +65,12 @@ class ClassicFormPage extends React.Component {
                       <strong className="white-text">Guess What</strong>
                       </MDBNavLink>
                     </MDBNavItem>
-                    <Link to="/QuizCategories"><MDBNavItem>
-                      <MDBNavLink to="#QuizCategories">Quiz Categories</MDBNavLink>
-                    </MDBNavItem></Link> 
+                   
+                     {/*  <Link to="/QuizCategories">Quiz Categories</Link> */}
+                     <Link to="/QuizCategories"><MDBNavItem>
+                      <MDBNavLink to="/QuizCategories">Quiz Categories</MDBNavLink> </MDBNavItem>
+                    </Link>
+                    
                     <MDBNavItem>
                       <MDBNavLink to="#!">Profile</MDBNavLink>
                     </MDBNavItem>
@@ -173,6 +176,7 @@ class ClassicFormPage extends React.Component {
             </MDBContainer>
           </MDBMask>
         </MDBView>
+          
 
         {/*   <MDBContainer>
           <MDBRow className="py-5">
@@ -189,7 +193,7 @@ class ClassicFormPage extends React.Component {
             </MDBCol>ß
           </MDBRow>
         </MDBContainer> */}
-        <QuizCategories />
+       <QuizCategories />
       </div>
     );
   }
