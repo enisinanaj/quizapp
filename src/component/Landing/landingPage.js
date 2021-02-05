@@ -50,9 +50,7 @@ class ClassicFormPage extends React.Component {
           <div>
             <MDBNavbar dark expand="md" fixed="top">
               <MDBContainer>
-               {/*  <MDBNavbarBrand>
-                  <strong className="white-text">Guess What</strong>
-                </MDBNavbarBrand> */}
+              
                 <MDBNavbarToggler
                   onClick={this.toggleCollapse("navbarCollapse")} />
                 <MDBCollapse
@@ -60,14 +58,12 @@ class ClassicFormPage extends React.Component {
                   isOpen={this.state.collapseID}
                   navbar >
                   <MDBNavbarNav left>
-                    <MDBNavItem active>
+                    <MDBNavItem >
                       <MDBNavLink to="/">
                       <strong className="white-text">Guess What</strong>
                       </MDBNavLink>
                     </MDBNavItem>
-                   
-                     {/*  <Link to="/QuizCategories">Quiz Categories</Link> */}
-                     <Link to="/QuizCategories"><MDBNavItem>
+                    <Link to="/QuizCategories"><MDBNavItem>
                       <MDBNavLink to="/QuizCategories">Quiz Categories</MDBNavLink> </MDBNavItem>
                     </Link>
                     
@@ -113,9 +109,10 @@ class ClassicFormPage extends React.Component {
                   <h6 className="mb-4">
                     Here is a platform you enjoy questioning and being questioned about. 
                   </h6>
-                  <MDBBtn  color="white">
+                 <Link to="/allQuiz"><MDBBtn onClick color="white">
                   Challenge yourSelf
                   </MDBBtn>
+                 </Link>
                   <MDBBtn outline color="white">
                     Challenge your friends
                   </MDBBtn>

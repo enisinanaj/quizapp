@@ -24,7 +24,3 @@ app.listen(port, () => {
     console.log("The API is running...")
 })
 
-/* 
-const brandRouter = require('./routes/brand')
-
-app.use('/brand', brandRouter) */

@@ -7,7 +7,7 @@ import navigation from './component/Landing/Navigation';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css'; 
-import QuizCategories from './component/Landing/QuizCategories';
+/* import allQuiz from './component/Landing/allQuiz'; */
 
 function App() {
   return (
@@ -15,7 +15,8 @@ function App() {
     <div className="App">
       <Switch>
         <Route path="/"  component={landingPage} />
-        <Route path="/QuizCategories"  component={QuizCategories} />
+        
+    {/*     <Route path="/allQuiz"  component={allQuiz} /> */}
         
        
 
