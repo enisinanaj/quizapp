@@ -193,7 +193,7 @@ class ClassicFormPage extends React.Component {
             </MDBCol>ß
           </MDBRow>
         </MDBContainer> */}
-       <QuizCategories />
+     
       </div>
     );
   }
