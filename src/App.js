@@ -13,7 +13,7 @@ function App() {
     <Router>
     <div className="App">
       <Switch>
-        <Route path="/"  component={landingPage} />
+        <Route path="/" exact component={landingPage} />
         <Route path="/QuizCategories"  component={QuizCategories} />
         
        
