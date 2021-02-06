@@ -3,7 +3,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './landing.css';
 import { Link } from "react-router-dom";
 import QuizCategories from './QuizCategories';
+import allQuiz from './allQuiz'
 import axios from 'axios';
+import Navigation from './Navigation';
 import {
   MDBNavbar,
   MDBNavbarNav,
@@ -28,68 +30,14 @@ import {
 import "./landing.css";
 
 class ClassicFormPage extends React.Component {
-  state = {
-    collapseID: ""
-  };
-
-  toggleCollapse = collapseID => () =>
-    this.setState(prevState => ({
-      collapseID: prevState.collapseID !== collapseID ? collapseID : ""
-    }));
+ 
 
   render() {
-    const overlay = (
-      <div
-        id="sidenav-overlay"
-        style={{ backgroundColor: "transparent" }}
-        onClick={this.toggleCollapse("navbarCollapse")} />
-    );
+
     return (
       <div id="classicformpage">
-        <Router>
-          <div>
-            <MDBNavbar dark expand="md" fixed="top">
-              <MDBContainer>
-              
-                <MDBNavbarToggler
-                  onClick={this.toggleCollapse("navbarCollapse")} />
-                <MDBCollapse
-                  id="navbarCollapse"
-                  isOpen={this.state.collapseID}
-                  navbar >
-                  <MDBNavbarNav left>
-                    <MDBNavItem >
-                      <MDBNavLink to="/">
-                      <strong className="white-text">Guess What</strong>
-                      </MDBNavLink>
-                    </MDBNavItem>
-                    <Link to="/QuizCategories"><MDBNavItem>
-                      <MDBNavLink to="/QuizCategories">Quiz Categories</MDBNavLink> </MDBNavItem>
-                    </Link>
-                    
-                    <MDBNavItem>
-                      <MDBNavLink to="#!">Profile</MDBNavLink>
-                    </MDBNavItem>
-                  </MDBNavbarNav>
-                  <MDBNavbarNav right>
-                    <MDBNavItem>
-                      <MDBFormInline waves>
-                        <div className="md-form my-0">
-                          <input
-                            className="form-control mr-sm-2"
-                            type="text"
-                            placeholder="Search"
-                            aria-label="Search" />
-                        </div>
-                      </MDBFormInline>
-                    </MDBNavItem>
-                  </MDBNavbarNav>
-                </MDBCollapse>
-              </MDBContainer>
-            </MDBNavbar>
-            {this.state.collapseID && overlay}
-          </div>
-        </Router>
+        <Navigation />
+        
 
         <MDBView>
           <MDBMask className="d-flex justify-content-center align-items-center gradient">
@@ -109,10 +57,11 @@ class ClassicFormPage extends React.Component {
                   <h6 className="mb-4">
                     Here is a platform you enjoy questioning and being questioned about. 
                   </h6>
-                 <Link to="/allQuiz"><MDBBtn onClick color="white">
+                 <Link  to="/QuizCategories"><MDBBtn color="white" >
                   Challenge yourSelf
-                  </MDBBtn>
-                 </Link>
+                  </MDBBtn></Link>
+                
+
                   <MDBBtn outline color="white">
                     Challenge your friends
                   </MDBBtn>

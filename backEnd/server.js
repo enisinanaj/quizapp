@@ -21,6 +21,6 @@ db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('database connected'))
 
 app.listen(port, () => {
-    console.log("The API is running...")
+    console.log(`Server is running on port: ${port}`)
 })
 

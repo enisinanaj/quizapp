@@ -1,7 +1,9 @@
 import React from 'react';
-import { MDBContainer, MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
+import { MDBContainer,MDBNav, MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from "react-router-dom";
+import allQuiz from './allQuiz';
+import QuizCategories from './QuizCategories';
 
 class FixedNavbarExample extends React.Component {
   constructor(props) {
@@ -19,28 +21,24 @@ class FixedNavbarExample extends React.Component {
   }
 
   render() {
-    const bgPink = {backgroundColor: '#e91e63'}
+    const bgPink = {backgroundColor: 'none'}
     const container = {height: 130}
     return(
       <div>
-        <Router>
+       
           <header>
             <MDBNavbar style={bgPink} dark expand="md" scrolling fixed="top">
               <MDBNavbarBrand href="/">
-                  <strong>Navbar</strong>
+                  <strong>Guess What</strong>
               </MDBNavbarBrand>
               <MDBNavbarToggler onClick={ this.onClick } />
               <MDBCollapse isOpen = { this.state.collapse } navbar>
                 <MDBNavbarNav left>
-                  <MDBNavItem active>
-                      <MDBNavLink to="#">Home</MDBNavLink>
-                  </MDBNavItem>
+                 
                   <MDBNavItem>
-                      <MDBNavLink to="#">Features</MDBNavLink>
+                      <MDBNavLink to="/QuizCategories">Quiz Categories</MDBNavLink>
                   </MDBNavItem>
-                  <MDBNavItem>
-                      <MDBNavLink to="#">Pricing</MDBNavLink>
-                  </MDBNavItem>
+                 
                   <MDBNavItem>
                     <MDBNavLink to="#">Options</MDBNavLink>
                   </MDBNavItem>
@@ -59,7 +57,7 @@ class FixedNavbarExample extends React.Component {
               </MDBCollapse>
             </MDBNavbar>
           </header>
-        </Router>
+        
     
       </div>
     );
