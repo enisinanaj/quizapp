@@ -75,3 +75,14 @@ section {
 .heroCard {
   color: #fff !important;
 }
+
+/* Styling the quizPage */
+
+.questions {
+  border-left: 10px solid rgba(8, 8, 72, 0.721) !important; 
+  width:80%;
+  padding: 16px;
+  background-color:rgba(92, 16, 159, 0.303) !important;
+  color: #fff !important;
+}
+

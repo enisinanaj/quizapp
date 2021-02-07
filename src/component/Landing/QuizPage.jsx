@@ -1,4 +1,3 @@
-
 import React, { Fragment } from 'react';
 import 'react-router-dom';
 import { Button } from 'react-bootstrap';
@@ -12,7 +11,6 @@ import {
   MDBContainer, 
   MDBIcon,
 } from "mdbreact";
-import './landing.css';
 import Navigation from './Navigation';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import IconButton from '@material-ui/core/IconButton';
@@ -22,6 +20,7 @@ import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutline
 import CloseIcon from '@material-ui/icons/Close';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import './landing.css';
 
 
 class QuizPlay extends React.Component {
