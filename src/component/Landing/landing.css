@@ -80,9 +80,79 @@ section {
 
 .questions {
   border-left: 10px solid rgba(8, 8, 72, 0.721) !important; 
-  width:80%;
+  width:100%;
   padding: 16px;
   background-color:rgba(92, 16, 159, 0.303) !important;
   color: #fff !important;
 }
+.lifeLine-container {
+  display: flex;
+  justify-content: space-between;
+}
 
+.lifeLine {
+  position: relative;
+  top: -3px;
+
+}
+h5 {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom:16px;
+  display: flex;
+  padding: 8px;
+
+}
+.option-container {
+  display: inline-flex;
+  width: 100%;
+  padding: 8px 0 0 0;
+}
+.option {
+   cursor: pointer;
+   transition: .3s linear all;
+   text-align: center;
+   width: 60%;
+ 
+}
+.btn-default:hover { 
+  background-color:#424f95;
+}
+.a.btn{
+   font-size: 1rem;
+    padding: 16px;
+    margin: 6px;
+    width: 50%;
+}
+
+a.btn,
+.purple-gradient:hover {
+  background-color: white;
+ 
+}
+.py-3 .px-md-5 {
+  margin-top: -0.25rem !important;
+  padding-left: 16px !important;
+    align-items: initial;
+    display: flex;
+}
+@media (min-width: 768px) {
+.pl-md-5, .px-md-5 {
+    padding-left: 0!important; 
+    padding-left: 16px !important;
+    align-items: left !important;
+    display: flex;
+}
+}
+@media (min-width: 768px){
+.pl-md-5, .px-md-5 {
+    padding-left: 0!important;
+}
+.pb-3, .py-3 {
+    padding-bottom: 0 !important; 
+}
+.pt-3, .py-3 {
+    padding-top: 0; 
+    margin-left: 0; 
+}
+}
