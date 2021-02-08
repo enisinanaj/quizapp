@@ -7,7 +7,7 @@ import navigation from './component/Landing/Navigation';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css'; 
-import allQuiz from './component/Landing/allQuiz';
+import QuizPage from './component/Landing/QuizPage';
 import QuizCategories from './component/Landing/QuizCategories';
 import { Link } from "react-router-dom";
 
@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route path="/" exact component={landingPage} />      
-        <Route path="/Quiz" exact component={allQuiz} /> 
+        <Route path="/QuizPage" exact component={QuizPage} /> 
         <Route path="/QuizCategories" exact component={QuizCategories} /> 
         
        

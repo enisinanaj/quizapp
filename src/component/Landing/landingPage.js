@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './landing.css';
 import { Link } from "react-router-dom";
 import QuizCategories from './QuizCategories';
-import allQuiz from './allQuiz'
+import QuizPage from './QuizPage';
 import axios from 'axios';
 import Navigation from './Navigation';
 import {
@@ -30,14 +30,14 @@ import {
 import "./landing.css";
 
 class ClassicFormPage extends React.Component {
- 
+
 
   render() {
 
     return (
       <div id="classicformpage">
         <Navigation />
-        
+
 
         <MDBView>
           <MDBMask className="d-flex justify-content-center align-items-center gradient">
@@ -55,12 +55,12 @@ class ClassicFormPage extends React.Component {
                     Are you up for a game?
                   </h4>
                   <h6 className="mb-4">
-                    Here is a platform you enjoy questioning and being questioned about. 
+                    Here is a platform you enjoy questioning and being questioned about.
                   </h6>
-                 <MDBBtn color="white" >
-                  Challenge yourSelf
+                  <MDBBtn color="white" >
+                    Challenge yourSelf
                   </MDBBtn>
-                
+
 
                   <MDBBtn outline color="white">
                     Challenge your friends
@@ -84,7 +84,7 @@ class ClassicFormPage extends React.Component {
                           className="white-text"
                           iconClass="white-text"
                           label="Your email"
-                          icon="envelope"/>
+                          icon="envelope" />
                         <MDBInput
                           className="white-text"
                           iconClass="white-text"
@@ -93,8 +93,7 @@ class ClassicFormPage extends React.Component {
                           type="password" />
                         <div className="text-center mt-4 black-text">
                           <MDBBtn color="white">Sign Up</MDBBtn>
-                          
-                          <hr className="hr-light" />
+
                           <div className="text-center d-flex justify-content-center white-label">
                             <a href="#!" className="p-2 m-2">
                               <MDBIcon
@@ -122,7 +121,7 @@ class ClassicFormPage extends React.Component {
             </MDBContainer>
           </MDBMask>
         </MDBView>
-          
+
 
         {/*   <MDBContainer>
           <MDBRow className="py-5">
@@ -139,70 +138,10 @@ class ClassicFormPage extends React.Component {
             </MDBCol>ß
           </MDBRow>
         </MDBContainer> */}
-     
+
       </div>
     );
   }
 }
 
 export default ClassicFormPage;
-
-/*
-class FullPageIntroWithFixedNavbar extends React.Component {
-  constructor(props) {
-    super(props);ß
-    this.state = {
-      collapse: false,
-      isWideEnough: false
-    };
-    this.onClick = this.onClick.bind(this);
-  }
-
-  onClick() {
-    this.setState({
-      collapse: !this.state.collapse
-    });
-  }
-
-  render() {
-    return (
-      <div>
-        <header>
-          <Router>
-            <MDBNavbar color="indigo" dark expand="md" fixed="top">
-              <MDBNavbarBrand href="/">
-                <strong>Guess What</strong>
-              </MDBNavbarBrand>
-              {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
-              <MDBCollapse isOpen={this.state.collapse} navbar>
-                <MDBNavbarNav left>
-
-                  <MDBNavItem>
-                    <MDBNavLink to="#">Quizz Categories</MDBNavLink>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <MDBNavLink to="#">Profile</MDBNavLink>
-                  </MDBNavItem>
-                </MDBNavbarNav>
-              </MDBCollapse>
-            </MDBNavbar>
-          </Router>
-
-
-        </header>
-
-        <main>
-          <MDBView src="https://i.ibb.co/7jyJLpR/back-Ground.png">
-            <MDBMask overlay="black-light" className="flex-center flex-column text-white text-center">
-              <h1>Guess What</h1>
-              <h2>It is a platform to play quizz with joy</h2>
-            </MDBMask>
-          </MDBView>
-        </main>
-          <QuizCategory />
-      </div>
-    );
-  }
-}
-
-export default FullPageIntroWithFixedNavbar; */

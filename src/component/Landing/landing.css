@@ -3,15 +3,17 @@ h1 {
   font-weight: bold;
 }
 
-#classicformpage .view {
-  background-image: url("https://i.ibb.co/7jyJLpR/back-Ground.png");
+#classicformpage .view,
+.quizPage {
+  background-image: url("https://i.ibb.co/7jyJLpR/back-Ground.png")!important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   height: 100vh;
 }
 
-#classicformpage .gradient {
+#classicformpage .gradient, 
+.quizPage {
   background: -webkit-linear-gradient(
     45deg,
     rgba(0, 0, 0, 0.7),
@@ -29,7 +31,7 @@ h1 {
   );
 }
 
-#classicformpage .card {
+#classicformpage .card{
   background-color: rgba(126, 123, 215, 0.2);
 }
 
@@ -41,7 +43,8 @@ h1 {
   transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
 }
 
-#classicformpage .top-nav-collapse {
+#classicformpage .top-nav-collapse,
+.quizPage {
   background: #424f95 !important;
 }
 
@@ -51,7 +54,8 @@ h1 {
   }
 }
 
-#classicformpage label {
+#classicformpage label,
+.quizPage {
   color: #fff !important;
 }
 .col-md-12.mb-4.white-text.text-center {
@@ -60,3 +64,95 @@ h1 {
   margin-left: 54%;
 }
 
+.categories {
+  margin-top : 64px;
+  margin-bottom : 24px;
+  padding:16px;
+}
+section {
+  background-image: url("https://i.ibb.co/7jyJLpR/back-Ground.png");
+}
+.heroCard {
+  color: #fff !important;
+}
+
+/* Styling the quizPage */
+
+.questions {
+  border-left: 10px solid rgba(8, 8, 72, 0.721) !important; 
+  width:100%;
+  padding: 16px;
+  background-color:rgba(92, 16, 159, 0.303) !important;
+  color: #fff !important;
+}
+.lifeLine-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lifeLine {
+  position: relative;
+  top: -3px;
+
+}
+h5 {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom:16px;
+  display: flex;
+  padding: 8px;
+
+}
+.option-container {
+  display: inline-flex;
+  width: 100%;
+  padding: 8px 0 0 0;
+}
+.option {
+   cursor: pointer;
+   transition: .3s linear all;
+   text-align: center;
+   width: 60%;
+ 
+}
+.btn-default:hover { 
+  background-color:#424f95;
+}
+.a.btn{
+   font-size: 1rem;
+    padding: 16px;
+    margin: 6px;
+    width: 50%;
+}
+
+a.btn,
+.purple-gradient:hover {
+  background-color: white;
+ 
+}
+.py-3 .px-md-5 {
+  margin-top: -0.25rem !important;
+  padding-left: 16px !important;
+    align-items: initial;
+    display: flex;
+}
+@media (min-width: 768px) {
+.pl-md-5, .px-md-5 {
+    padding-left: 0!important; 
+    padding-left: 16px !important;
+    align-items: left !important;
+    display: flex;
+}
+}
+@media (min-width: 768px){
+.pl-md-5, .px-md-5 {
+    padding-left: 0!important;
+}
+.pb-3, .py-3 {
+    padding-bottom: 0 !important; 
+}
+.pt-3, .py-3 {
+    padding-top: 0; 
+    margin-left: 0; 
+}
+}
