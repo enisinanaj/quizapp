@@ -13,7 +13,7 @@ import {
   MDBCol,
   MDBRow
 } from "mdbreact";
-import Navigation from './Navigation';
+import Navigation from '../Landing/Navigation';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import IconButton from '@material-ui/core/IconButton';
 import HourglassEmptyOutlinedIcon from '@material-ui/icons/HourglassEmptyOutlined';
@@ -21,9 +21,12 @@ import HighlightOutlinedIcon from '@material-ui/icons/HighlightOutlined';
 import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
 import CloseIcon from '@material-ui/icons/Close';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';import './landing.css';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';import '../Landing/landing.css';
 import questions from '../../questions.json';
 import isEmpty from '../../utils/is-empty';
+
+import M from 'materialize-css';
+import 'materialize-css/dist/css/materialize.min.css';
 
 
 
@@ -76,6 +79,51 @@ displayQuestions = (questions = this.state.questions, currentQuestion, nextQuest
       });
   }     
 };
+
+// to handle the click on each option button
+handleOptionClick = (e) => {
+ /*  M.toast({
+    html: 'Option Clicked'
+  }); */
+  // to check if the user selected the correct option
+  if (e.target.innerHTML.toLowerCase() === this.state.answer.toLowerCase()) {
+    this.correctAnswer();
+  } else {
+    this.WrongAnswer();
+  }
+}
+
+
+// handling Correct Answer 
+correctAnswer = () => {
+  M.toast({
+    html: 'Correct Answer',
+    classes: 'toast-valid',
+    displayLength: 1500
+  });
+  this.setState(prevState => ({
+    score: prevState.score + 1,
+    correctAnswers: prevState.correctAnswers +1, 
+    currentQuestionIndex :prevState.currentQuestionIndex ,
+    numberOfAnsweredQuestions : prevState.numberOfAnsweredQuestions + 1
+  }));
+}
+
+// handling wrong Answer 
+WrongAnswer = () => {
+  navigator.vibrate (1000);
+  M.toast({
+    html: 'Wrong Answer',
+    classes: 'toast-invalid',
+    displayLength: 1500
+  });
+  this.setState(prevState => ({
+    wrongAnswers: prevState.wrongAnswers + 1,
+    currentQuestionIndex : prevState.currentQuestionIndex + 1,
+    numberOfAnsweredQuestions : prevState.numberOfAnsweredQuestions + 1
+  }));
+}
+
   render() {
     const { currentQuestion } = this.state;
     return (
@@ -109,15 +157,15 @@ displayQuestions = (questions = this.state.questions, currentQuestion, nextQuest
                   </div>
                   <h5> { currentQuestion.question } </h5>
                   <div className="option-container">
-                    <MDBBtn className="option" tag="a" size="lg" floating gradient="purple">{currentQuestion.optionA}</MDBBtn>
-                    <MDBBtn className="option" tag="a" size="lg" floating gradient="purple">{currentQuestion.optionB}</MDBBtn>
+                    <MDBBtn onClick={ this.handleOptionClick}  className="option" tag="a" size="lg" floating gradient="purple">{currentQuestion.optionA}</MDBBtn>
+                    <MDBBtn onClick={ this.handleOptionClick} className="option" tag="a" size="lg" floating gradient="purple">{currentQuestion.optionB}</MDBBtn>
 
                   </div>
                   <div className="option-container">
-                    <MDBBtn className="option" tag="a" size="lg" floating gradient="purple">
+                    <MDBBtn onClick={ this.handleOptionClick} className="option" tag="a" size="lg" floating gradient="purple">
                      {currentQuestion.optionC}
                     </MDBBtn>
-                    <MDBBtn className="option" tag="a" size="lg" floating gradient="purple"> 
+                    <MDBBtn onClick={ this.handleOptionClick} className="option" tag="a" size="lg" floating gradient="purple"> 
                       {currentQuestion.optionD}
                     </MDBBtn>
                   </div>

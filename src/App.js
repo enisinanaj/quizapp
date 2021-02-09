@@ -7,8 +7,8 @@ import navigation from './component/Landing/Navigation';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css'; 
-import QuizPage from './component/Landing/QuizPage';
-import QuizCategories from './component/Landing/QuizCategories';
+import QuizPage from './component/Quiz/QuizPage';
+import QuizCategories from './component/Quiz/QuizCategories';
 import { Link } from "react-router-dom";
 
 function App() {
