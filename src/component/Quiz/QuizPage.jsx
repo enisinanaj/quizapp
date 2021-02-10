@@ -79,7 +79,6 @@ class QuizPlay extends React.Component {
         previousQuestion,
         numberOfQuestions: questions.length,
         answer,
-
       });
     }
   };
@@ -88,7 +87,7 @@ class QuizPlay extends React.Component {
   handleOptionClick = (e) => {
 
     // to check if the user selected the correct option
-    if (e.target.innerHTML.toLowerCase() === this.state.answer.toLowerCase()) {
+    if (e.target.text.toLowerCase() === this.state.answer.toLowerCase()) {
       setTimeout(() => {
         document.getElementById('correct-sound').play();
       }, 500 ) 
@@ -113,7 +112,7 @@ playButtonSound = () => {
 
   // handling wrong Answer 
   WrongAnswer = () => {
-    navigator.vibrate(1000);
+    //navigator.vibrate(1000);
     M.toast({
       html: 'Wrong Answer',
       classes: 'toast-invalid',
