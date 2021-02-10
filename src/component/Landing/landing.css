@@ -11,12 +11,14 @@ h1 {
   background-position: center center;
   height: 100vh;
 }
-
-#classicformpage .gradient, 
-.quizPage {
+#classicformpage > div.view > div > div > div.button-contaier > button:nth-child(2) {
+  color: black !important;
+  margin: 12px  !important;
+}
+#classicformpage .gradient {
   background: -webkit-linear-gradient(
     45deg,
-    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7) !important,
     rgba(72, 15, 144, 0.4) 100%
   );
   background: -webkit-gradient(
@@ -32,25 +34,29 @@ h1 {
 }
 
 #classicformpage .card{
-  background-color: rgba(126, 123, 215, 0.2);
+  background-color: rgba(126, 123, 215, 0.2) !important;
 }
 
 #classicformpage h6 {
-  line-height: 1.7;
+  line-height: 1.7 !important;
 }
 
 #classicformpage .navbar {
-  transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+  transition: backgroundColor 0.5s ease-in-out , padding 0.5s ease-in-out !important;
 }
 
 #classicformpage .top-nav-collapse,
-.quizPage {
+ {
   background: #424f95 !important;
 }
+#classicformpage > div:nth-child(1) > header > nav {
+  background: none !important ;
+}
+
 
 @media (max-width: 768px) {
   #classicformpage .navbar:not(.top-nav-collapse) {
-    background: #424f95 !important;
+    background: #424f95;
   }
 }
 
@@ -104,30 +110,30 @@ h5 {
 
 }
 .option-container {
-  display: inline-flex;
-  width: 100%;
-  padding: 8px 0 0 0;
+  display: inline-flex !important;
+  width: 100%!important;
+  padding: 8px 0 0 0 !important;
 }
 .option {
-   cursor: pointer;
-   transition: .3s linear all;
-   text-align: center;
-   width: 60%;
+   cursor: pointer !important;
+   transition: .3s linear all !important;
+   text-align: center !important;
+   width: 60% !important;
  
 }
 .btn-default:hover { 
-  background-color:#424f95;
+  background-color:#424f95 !important;
 }
 .a.btn{
-   font-size: 1rem;
-    padding: 16px;
-    margin: 6px;
-    width: 50%;
+   font-size: 1rem !important;
+    padding: 16px !important;
+    margin: 6px !important;
+    width: 50% !important;
 }
 
 a.btn,
 .purple-gradient:hover {
-  background-color: white;
+  background-color: white !important;
  
 }
 .py-3 .px-md-5 {
@@ -152,7 +158,36 @@ a.btn,
     padding-bottom: 0 !important; 
 }
 .pt-3, .py-3 {
-    padding-top: 0; 
-    margin-left: 0; 
+    padding-top: 0 !important; 
+    margin-left: 0 !important; 
 }
+}
+
+.btn, .btn-large, .btn-small, .btn-flat {
+  border: none;
+  border-radius: 2px !important;
+  display: inline-block !important;
+  height: 36px;
+  line-height: 36px !important;
+  padding: 0 16px !important;
+  text-transform: uppercase !important;
+  vertical-align: middle !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%) !important;
+}
+.bgPink{ 
+  background-color: none !important;
+}
+.toast-valid {
+  background-color:rgb(18, 11, 118) !important;
+  border-radius: 5px !important;
+  color: #fff !important;
+}
+.toast-invalid {
+  background-color:rgb(179, 4, 124) !important;
+  border-radius: 5px !important;
+  color: #fff !important;
 }

@@ -2,8 +2,8 @@ import React from 'react';
 import { MDBContainer, MDBNav, MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Link } from "react-router-dom";
-import allQuiz from './QuizPage';
-import QuizCategories from './QuizCategories';
+import allQuiz from '../Quiz/QuizPage';
+import QuizCategories from '../Quiz/QuizCategories';
 
 class FixedNavbarExample extends React.Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class FixedNavbarExample extends React.Component {
   }
 
   render() {
-    const bgPink = { backgroundColor: 'none' }
+    const bgPink = { backgroundColor: 'none !important' }
     const container = { height: 130 }
     return (
       <div>

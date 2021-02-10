@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './landing.css';
 import { Link } from "react-router-dom";
-import QuizCategories from './QuizCategories';
-import QuizPage from './QuizPage';
+import QuizCategories from '../Quiz/QuizCategories';
+import QuizPage from '../Quiz/QuizPage';
 import axios from 'axios';
 import Navigation from './Navigation';
 import {
