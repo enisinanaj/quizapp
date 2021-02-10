@@ -181,3 +181,13 @@ a.btn,
 .bgPink{ 
   background-color: none !important;
 }
+.toast-valid {
+  background-color:rgb(18, 11, 118) !important;
+  border-radius: 5px !important;
+  color: #fff !important;
+}
+.toast-invalid {
+  background-color:rgb(179, 4, 124) !important;
+  border-radius: 5px !important;
+  color: #fff !important;
+}
